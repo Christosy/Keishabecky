@@ -12,25 +12,43 @@
   </style>
 </head>
 <body>
-<p class="p1">&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>const steps = [</p>
-<p class="p1"><span class="Apple-converted-space">    </span>"Welcome to Step 1! Click 'Next' to continue.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>"You're doing great! This is Step 2.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>"Almost there! This is Step 3.",</p>
-<p class="p1"><span class="Apple-converted-space">    </span>"Congratulations! You've reached the prize 🎉"</p>
-<p class="p1"><span class="Apple-converted-space">  </span>];</p>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Step-by-Step Prize Hunt&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>#content { margin-bottom: 20px; font-size: 24px; font-weight: bold; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>button { padding: 10px 20px; font-size: 16px; cursor: pointer; }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="content"&gt;Welcome to Step 1! Click "Next" to continue.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;button onclick="nextStep()"&gt;Next&lt;/button&gt;</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>let currentStep = 0;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const steps = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Welcome to Step 1! Click 'Next' to continue.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"You're doing great! This is Step 2.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Almost there! This is Step 3.",</p>
+<p class="p1"><span class="Apple-converted-space">            </span>"Congratulations! You've reached the prize 🎉"</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
 <p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>function nextStep() {</p>
-<p class="p1"><span class="Apple-converted-space">    </span>currentStep++;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>if (currentStep &lt; steps.length) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("content").innerText = steps[currentStep];</p>
-<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("content").innerText = "🎉 Congratulations! 🎉";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.querySelector("button").style.display = "none"; // Hide the button</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>}</p>
-<p class="p1">&lt;/script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>let currentStep = 0;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>function nextStep() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>currentStep++;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (currentStep &lt; steps.length) {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById("content").innerText = steps[currentStep];</p>
+<p class="p1"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.getElementById("content").innerText = "🎉 Congratulations! 🎉";</p>
+<p class="p1"><span class="Apple-converted-space">                </span>document.querySelector("button").style.display = "none"; // Hide the button</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
 </body>
 </html>
